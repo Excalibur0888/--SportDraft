@@ -174,69 +174,64 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // FAQ Accordion functionality
-    const faqItems = document.querySelectorAll('.faq-item h3');
+    const faqItems = document.querySelectorAll('.faq-item');
     
     if (faqItems.length > 0) {
         // Initially hide all answers except the first one
-        const faqAnswers = document.querySelectorAll('.faq-answer');
-        for (let i = 1; i < faqAnswers.length; i++) {
-            faqAnswers[i].style.display = 'none';
-        }
-        
-        // Add click event to all FAQ questions
-        faqItems.forEach(item => {
+        faqItems.forEach((item, index) => {
+            const question = item.querySelector('h3');
+            const answer = item.querySelector('p');
+            
+            // Add cursor pointer to entire faq-item
+            item.style.cursor = 'pointer';
+            
+            // Initially hide all answers except the first one
+            if (index > 0) {
+                answer.style.display = 'none';
+            }
+            
+            // Add initial arrow to all items
+            if (!question.querySelector('.faq-arrow')) {
+                const arrow = document.createElement('span');
+                arrow.className = 'faq-arrow';
+                arrow.innerHTML = index === 0 ? '▼' : '▶';
+                arrow.style.position = 'absolute';
+                arrow.style.right = '0';
+                arrow.style.top = '50%';
+                arrow.style.transform = 'translateY(-50%)';
+                arrow.style.fontSize = '12px';
+                arrow.style.color = 'var(--primary)';
+                question.style.paddingRight = '20px';
+                question.style.position = 'relative';
+                question.appendChild(arrow);
+            }
+            
+            // Add active class to first item
+            if (index === 0) {
+                question.classList.add('active');
+            }
+            
+            // Add click event to the entire FAQ item
             item.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
+                const question = this.querySelector('h3');
+                const answer = this.querySelector('p');
+                const arrow = question.querySelector('.faq-arrow');
                 
                 // Toggle the current answer
                 if (answer.style.display === 'none' || answer.style.display === '') {
                     answer.style.display = 'block';
-                    this.classList.add('active');
-                    
-                    // Add a small arrow indicator when active
-                    this.style.paddingRight = '20px';
-                    this.style.position = 'relative';
-                    
-                    if (!this.querySelector('.faq-arrow')) {
-                        const arrow = document.createElement('span');
-                        arrow.className = 'faq-arrow';
+                    question.classList.add('active');
+                    if (arrow) {
                         arrow.innerHTML = '▼';
-                        arrow.style.position = 'absolute';
-                        arrow.style.right = '0';
-                        arrow.style.top = '50%';
-                        arrow.style.transform = 'translateY(-50%)';
-                        arrow.style.fontSize = '12px';
-                        arrow.style.color = 'var(--primary)';
-                        this.appendChild(arrow);
-                    } else {
-                        this.querySelector('.faq-arrow').innerHTML = '▼';
                     }
                 } else {
                     answer.style.display = 'none';
-                    this.classList.remove('active');
-                    
-                    // Change arrow when collapsed
-                    if (this.querySelector('.faq-arrow')) {
-                        this.querySelector('.faq-arrow').innerHTML = '▶';
+                    question.classList.remove('active');
+                    if (arrow) {
+                        arrow.innerHTML = '▶';
                     }
                 }
-                
             });
-            
-            // Add initial arrow to all items
-            const arrow = document.createElement('span');
-            arrow.className = 'faq-arrow';
-            arrow.innerHTML = item.nextElementSibling.style.display === 'none' ? '▶' : '▼';
-            arrow.style.position = 'absolute';
-            arrow.style.right = '0';
-						arrow.style.cursor = 'pointer';
-            arrow.style.top = '50%';
-            arrow.style.transform = 'translateY(-50%)';
-            arrow.style.fontSize = '12px';
-            arrow.style.color = 'var(--primary)';
-            item.style.paddingRight = '20px';
-            item.style.position = 'relative';
-            item.appendChild(arrow);
         });
     }
 }); 

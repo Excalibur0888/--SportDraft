@@ -1,4 +1,8 @@
 /* Legal Pages Styles (Terms & Conditions, Privacy Policy) */
+ul {
+	list-style: none;
+}
+
 .legal-page, .privacy-policy {
     padding-top: 40px;
 }

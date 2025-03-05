@@ -132,11 +132,18 @@
     margin-bottom: 20px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    cursor: pointer;
+    position: relative;
 }
 
 .faq-item:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
+    background-color: rgba(var(--primary-rgb), 0.03);
+}
+
+.faq-item:active {
+    transform: translateY(-1px);
 }
 
 .faq-item:last-child {
@@ -148,12 +155,18 @@
     margin-bottom: 12px;
     color: var(--primary);
     position: relative;
+    transition: color 0.2s ease;
+}
+
+.faq-item h3.active {
+    color: var(--secondary);
 }
 
 .faq-item p {
     color: var(--gray);
     line-height: 1.6;
     margin: 0;
+    transition: all 0.3s ease;
 }
 
 /* Legal Disclaimer */

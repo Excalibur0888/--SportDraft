@@ -645,6 +645,7 @@ a {
 
 .download-button:hover {
     background: rgba(255, 255, 255, 0.2);
+		color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -1157,6 +1158,7 @@ a {
 .download-button {
     display: inline-flex;
     align-items: center;
+		justify-content: center;
     gap: 1rem;
     padding: 1rem 2rem;
     background: var(--white);
@@ -1417,8 +1419,10 @@ a {
 }
 
 .app-download-page .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
     gap: 2rem;
 }
 
@@ -1513,7 +1517,6 @@ a {
 @media (max-width: 1024px) {
     .app-download-page .preview-content,
     .app-download-page .benefits-grid,
-    .app-download-page .features-grid,
     .app-download-page .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -1523,7 +1526,6 @@ a {
 @media (max-width: 768px) {
     .app-download-page .preview-content,
     .app-download-page .benefits-grid,
-    .app-download-page .features-grid,
     .app-download-page .testimonials-grid,
     .app-download-page .app-info {
         grid-template-columns: 1fr;
