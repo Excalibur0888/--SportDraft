@@ -1,0 +1,350 @@
+/* Mobile Landing Styles */
+.mobile-landing {
+    display: none;
+}
+
+/* Burger menu for homepage at widths below 767px */
+@media screen and (max-width: 767px) {
+    .home-page .menu-toggle {
+        display: flex !important;
+    }
+    
+    .home-page .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--white);
+        padding: 1rem 0;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .home-page .nav-links.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+}
+
+/* For non-homepage pages, ensure the burger menu works at all sizes below 767px */
+@media screen and (max-width: 767px) {
+    /* Ensure the menu toggle is visible */
+    body:not(.home-page) .menu-toggle {
+        display: flex !important;
+        z-index: 1000 !important;
+    }
+    
+    /* Style the navigation links */
+    body:not(.home-page) .nav-links {
+        position: fixed !important;
+        top: 80px !important;
+        left: 0 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        background: var(--white) !important;
+        padding: 1rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        transform: translateY(-100%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: all 0.3s ease !important;
+        z-index: 999 !important;
+    }
+    
+    /* Style the active state of navigation links */
+    body:not(.home-page) .nav-links.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+    }
+    
+    /* Style individual navigation links */
+    body:not(.home-page) .nav-links li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    body:not(.home-page) .nav-links li a {
+        display: block !important;
+        padding: 1rem !important;
+    }
+}
+
+/* Mobile landing for homepage only */
+@media screen and (max-width: 768px) {
+    /* Only hide the header on the homepage */
+    .home-page .main-header,
+    .home-page .desktop-only {
+        display: none;
+    }
+
+    /* Only show the mobile landing on the homepage */
+    .home-page .mobile-landing {
+        display: block;
+        min-height: 100vh;
+        background: #000;
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Make sure the header is visible on non-homepage pages */
+    body:not(.home-page) .main-header {
+        display: block !important;
+    }
+
+    .mobile-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 2rem;
+    }
+
+    .overline {
+        display: block;
+        font-size: 1rem;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+		.overline-large {
+			display: block;
+			font-size: 2rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: .5rem;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+	}
+
+    .mobile-hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -1px;
+    }
+
+    .mobile-hero .accent {
+        color: var(--accent);
+    }
+
+    .mobile-hero .gradient-text {
+        font-size: 2rem;
+        font-weight: 600;
+        background: linear-gradient(45deg,
+            #4f46e5,  /* Indigo */
+            #06b6d4,  /* Cyan */
+            #22c55e,  /* Green */
+            #eab308,  /* Yellow */
+            #ef4444,  /* Red */
+            #ec4899   /* Pink */
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+    }
+
+    .hero-visual {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        margin: 2rem auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .floating-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .float-item {
+        position: absolute;
+        font-size: 2rem;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
+
+    .float-item.trophy {
+        top: -10%;
+        right: -10%;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .float-item.ball {
+        bottom: 20%;
+        left: -10%;
+        animation: float 3s ease-in-out infinite 1s;
+    }
+
+    .float-item.star {
+        top: 30%;
+        right: -5%;
+        animation: float 3s ease-in-out infinite 2s;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 3rem;
+        background: var(--accent);
+        color: var(--white);
+        font-weight: 600;
+        font-size: 1.125rem;
+        border-radius: var(--radius-md);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .cta-button:active {
+        transform: scale(0.98);
+    }
+
+    .button-effect {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            45deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transform: rotate(45deg);
+        animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-150%) rotate(45deg);
+        }
+        50% {
+            transform: translateX(150%) rotate(45deg);
+        }
+        100% {
+            transform: translateX(150%) rotate(45deg);
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .pulse {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 15px rgba(245, 158, 11, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+        }
+    }
+}
+
+/* Age Verification Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.modal-content p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.modal-actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-actions .btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.modal-actions .btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.modal-actions .btn-secondary {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.modal-actions .btn-secondary:hover {
+    background: #e2e8f0;
+} 

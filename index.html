@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">	
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SportDraft - Your Ultimate Fantasy Sports Destination">
+    <title>SportDraft - Fantasy Sports Revolution</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="home-page">
+    <!-- Age Verification Modal -->
+    <div class="modal age-verify" id="ageVerifyModal">
+        <div class="modal-content">
+            <h2>Age Verification</h2>
+            <p>You must be 18 or older to access this site.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" id="confirmAge">I am 18 or older</button>
+                <button class="btn-secondary" id="rejectAge">I am under 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Landing -->
+    <div class="mobile-landing" id="mobileLanding">
+        <div class="mobile-hero">
+            <div class="hero-text">
+                <span class="overline">Also</span>
+								<span class="overline-large">Enjoy</span>
+                <div class="gradient-text">Exclusive Offers</div>
+            </div>
+            <div class="hero-visual">
+                <img src="/img/mobile-bg.jpg" alt="Sports Collage" class="hero-image">
+                <div class="floating-elements">
+                    <div class="float-item trophy">🏆</div>
+                    <div class="float-item ball">⚽</div>
+                    <div class="float-item star">⭐</div>
+                </div>
+            </div>
+            <a href="/app-download" class="cta-button pulse">
+                Start Playing
+                <span class="button-effect"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+		<header class="main-header">
+			<nav class="nav-container">
+					<div class="logo">
+							<a href="/">
+									<span class="logo-text">SPORT<span class="accent">DRAFT</span></span>
+							</a>
+					</div>
+					<button class="menu-toggle" aria-label="Toggle Menu">
+							<span></span>
+							<span></span>
+							<span></span>
+					</button>
+					<ul class="nav-links">
+							<li><a href="/" class="nav-link active">Home</a></li>
+							<li><a href="/app-download" class="nav-link">Download App</a></li>
+							<li><a href="/learn" class="nav-link">Learn</a></li>
+							<li><a href="/rules" class="nav-link">Rules</a></li>
+							<li><a href="/contact" class="nav-link">Contact</a></li>
+					</ul>
+			</nav>
+	</header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text-content">
+                        <h1>Transform Your 
+                            <span class="gradient-text">Sports Knowledge</span> 
+                            Into Victory
+                        </h1>
+                        <p>Join millions of players creating winning teams and competing in thrilling fantasy sports tournaments.</p>
+                        <div class="hero-cta">
+                            <a href="/app-download" class="btn-primary">Get Started</a>
+                            <a href="/learn" class="btn-secondary">How It Works</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">1M+</span>
+                                <span class="stat-label">Active Players</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10M+</span>
+                                <span class="stat-label">Points Won</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4.8★</span>
+                                <span class="stat-label">User Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-image-container">
+                            <img src="/img/hero-main.jpg" alt="Fantasy Sports Dashboard" class="hero-image">
+                            <div class="floating-cards">
+                                <div class="floating-stat-card">
+                                    <div class="card-icon"><img src="/img/trophy.svg" alt="Trophy"></div>
+                                    <div class="card-text">
+                                        <span class="card-title">Tournament Won!</span>
+                                        <span class="card-value">+1000 pts</span>
+                                    </div>
+                                </div>
+                                <div class="player-card">
+                                    <img src="/img/player-avatar.jpg" alt="Player" class="player-avatar">
+                                    <div class="player-info">
+                                        <span class="player-name">M. Dhoni</span>
+                                        <span class="player-points">+125 pts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Tournaments -->
+        <section class="tournaments-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live Tournaments</h2>
+                    <p>Join exciting tournaments happening right now</p>
+                </div>
+                <div class="tournaments-grid">
+                    <!-- Cricket Tournament -->
+                    <div class="tournament-card">
+                        <div class="tournament-header cricket">
+                            <div class="sport-type">
+                                <img src="/img/cricket.svg" alt="Cricket">
+                                <span>Cricket</span>
+                            </div>
+                            <div class="prize-pool">
+                                <span class="prize-amount">100,000</span>
+                                <span class="prize-label">Point Pool</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <h3>IPL Fantasy League</h3>
+                            <div class="tournament-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">Teams</span>
+                                    <span class="meta-value">10,000</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Entry</span>
+                                    <span class="meta-value">49 Points</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Time Left</span>
+                                    <span class="meta-value countdown">2h 15m</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75% Full</span>
+                            </div>
+                            <a href="/app-download" class="btn-join">Join Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Football Tournament -->
+                    <div class="tournament-card">
+                        <div class="tournament-header football">
+                            <div class="sport-type">
+                                <img src="/img/football.svg" alt="Football">
+                                <span>Football</span>
+                            </div>
+                            <div class="prize-pool">
+                                <span class="prize-amount">50,000</span>
+                                <span class="prize-label">Point Pool</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <h3>Premier League Masters</h3>
+                            <div class="tournament-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">Teams</span>
+                                    <span class="meta-value">5,000</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Entry</span>
+                                    <span class="meta-value">25 Points</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Time Left</span>
+                                    <span class="meta-value countdown">5h 30m</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-text">45% Full</span>
+                            </div>
+                            <a href="/app-download" class="btn-join">Join Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Basketball Tournament -->
+                    <div class="tournament-card">
+                        <div class="tournament-header basketball">
+                            <div class="sport-type">
+                                <img src="/img/basketball.svg" alt="Basketball">
+                                <span>Basketball</span>
+                            </div>
+                            <div class="prize-pool">
+                                <span class="prize-amount">25,000</span>
+                                <span class="prize-label">Point Pool</span>
+                            </div>
+                        </div>
+                        <div class="tournament-body">
+                            <h3>NBA Fantasy Challenge</h3>
+                            <div class="tournament-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">Teams</span>
+                                    <span class="meta-value">2,500</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Entry</span>
+                                    <span class="meta-value">20 Points</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Time Left</span>
+                                    <span class="meta-value countdown">1h 45m</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%"></div>
+                                </div>
+                                <span class="progress-text">90% Full</span>
+                            </div>
+                            <a href="/app-download" class="btn-join">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose SportDraft</h2>
+                    <p>Experience the best in fantasy sports gaming</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="/img/secure-icon.svg" alt="Secure Gaming">
+                        </div>
+                        <h3>Secure Gaming</h3>
+                        <p>Bank-grade security for all transactions and personal data</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="/img/instant-icon.svg" alt="Instant Withdrawals">
+                        </div>
+                        <h3>Instant Withdrawals</h3>
+                        <p>Get your points instantly with secure withdrawal methods</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="/img/support-icon.svg" alt="24/7 Support">
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our dedicated team is always here to help you</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="/img/rewards-icon.svg" alt="Daily Rewards">
+                        </div>
+                        <h3>Daily Rewards</h3>
+                        <p>Earn bonus points and special rewards every day you play</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="/img/users-icon.svg" alt="Active Players">
+                        </div>
+                        <div class="stat-info">
+                            <h3>1M+</h3>
+                            <p>Active Players</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="/img/trophy-icon.svg" alt="Points Paid">
+                        </div>
+                        <div class="stat-info">
+                            <h3>10M+</h3>
+                            <p>Points Paid</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="/img/contest-icon.svg" alt="Daily Contests">
+                        </div>
+                        <div class="stat-info">
+                            <h3>100K+</h3>
+                            <p>Daily Contests</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="/img/star-icon.svg" alt="App Rating">
+                        </div>
+                        <div class="stat-info">
+                            <div class="rating-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star half-filled">★</span>
+                                <span class="rating-number">4.8</span>
+                            </div>
+                            <p>App Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>Start winning in three simple steps</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Download App</h3>
+                        <p>Get our app from Google Play or App Store</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Join Contests</h3>
+                        <p>Pick your sport and enter tournaments</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Win Prizes</h3>
+                        <p>Compete and win exciting rewards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Player Stories</h2>
+                    <p>Hear from our champions</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="/img/user1.jpg" alt="Rahul S." class="user-avatar">
+                            <div class="user-details">
+                                <h3>Rahul S.</h3>
+                                <p>Bangalore, India</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Started playing 6 months ago and already won big! The platform is super easy to use."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <img src="/img/user2.jpg" alt="Priya M." class="user-avatar">
+                            <div class="user-details">
+                                <h3>Priya M.</h3>
+                                <p>Mumbai, India</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Best fantasy sports app! The live updates and instant withdrawals are amazing."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Updates</h2>
+                    <p>Stay informed about new features and tournaments</p>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="/img/news1.jpg" alt="New Tournament Format">
+                        </div>
+                        <div class="news-content">
+                            <h3>New Tournament Format</h3>
+                            <p>Introducing daily knockout tournaments with bigger point pools</p>
+                            <a href="/app-download" class="read-more">Download App →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="/img/news2.jpg" alt="App Update">
+                        </div>
+                        <div class="news-content">
+                            <h3>App Update v2.0</h3>
+                            <p>New features and improved performance in our latest release</p>
+                            <a href="/app-download" class="read-more">Download App →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download App Section -->
+        <section class="download-section" id="download">
+            <div class="container">
+                <div class="download-content">
+                    <div class="download-text">
+                        <h2>Get the SportDraft App</h2>
+                        <p>Download now and get 1000 bonus points on signup!</p>
+                        <div class="download-features">
+                            <div class="feature-item">
+                                <img src="/img/feature-icon-1.svg" alt="Quick Join">
+                                <span>Quick Tournament Join</span>
+                            </div>
+                            <div class="feature-item">
+                                <img src="/img/feature-icon-2.svg" alt="Live Updates">
+                                <span>Real-time Updates</span>
+                            </div>
+                            <div class="feature-item">
+                                <img src="/img/feature-icon-3.svg" alt="Secure Login">
+                                <span>Secure Login</span>
+                            </div>
+                        </div>
+                        <div class="download-buttons">
+                            <a href="/app-download" class="download-button">
+                                <img src="/img/download-icon.svg" alt="Download">
+                                <span>Download App</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="download-visual">
+                        <div class="app-preview">
+                            <img src="/img/app-preview.jpg" alt="SportDraft App Interface" class="app-screenshot">
+                            <div class="rating-card">
+                                <div class="rating-stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star half-filled">★</span>
+                                </div>
+                                <div class="rating-text">
+                                    <span class="rating-number">4.8</span>
+                                    <span class="rating-count">50K+ Reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="disclaimer-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Legal Disclaimer</h2>
+                </div>
+                <div class="disclaimer-content">
+                    <p>Participation in fantasy sports is governed by the laws applicable in India. Fantasy sports are categorized as a 'game of skill' under Indian law and are legal in most states. However, residents of Andhra Pradesh, Assam, Nagaland, Odisha, Sikkim, and Telangana are not eligible to participate as per state regulations. Users must be at least 18 years of age to register and play on this platform. Please play responsibly and ensure compliance with applicable laws before participating.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+					<div class="footer-grid">
+							<div class="footer-section">
+									<h3>Quick Links</h3>
+									<ul>
+											<li><a href="/">Home</a></li>
+											<li><a href="/app-download">Download App</a></li>
+											<li><a href="/learn">Learn</a></li>
+											<li><a href="/rules">Rules</a></li>
+									</ul>
+							</div>
+							<div class="footer-section">
+									<h3>Support</h3>
+									<ul>
+											<li><a href="/contact">Contact Us</a></li>
+											<li><a href="/privacy-policy">Privacy Policy</a></li>
+											<li><a href="/terms-conditions">Terms & Conditions</a></li>
+									</ul>
+							</div>
+							<div class="footer-section">
+									<h3>Legal</h3>
+									<div class="restricted-states">
+											<p>Not available in: AP, AS, NA, OD, SK, TL</p>
+									</div>
+									<div class="footer-icons">
+											<a href="https://www.gamcare.org.uk/" target="_blank"><img src="/img/6.png" alt="18+ Only" class="age-icon"></a>
+											<img src="/img/18.png" alt="Gamcare" class="secure-icon">
+									</div>
+							</div>
+							<div class="footer-section">
+									<h3>Connect With Us</h3>
+									<div class="social-links">
+											<a href="/contact" class="social-link">
+													<img src="/img/twitter.svg" alt="Twitter">
+											</a>
+											<a href="/contact" class="social-link">
+													<img src="/img/facebook.svg" alt="Facebook">
+											</a>
+											<a href="/contact" class="social-link">
+													<img src="/img/instagram.svg" alt="Instagram">
+											</a>
+											<a href="/contact" class="social-link">
+													<img src="/img/youtube.svg" alt="YouTube">
+											</a>
+									</div>
+							</div>
+					</div>
+					<div class="footer-bottom">
+							<p>© 2025 SportDraft. All rights reserved.</p>
+					</div>
+			</div>
+	</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

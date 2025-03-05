@@ -1,0 +1,442 @@
+/* Rules Page Styles */
+.rules-page {
+    padding-top: 40px;
+}
+
+/* Rules Overview Section */
+.rules-overview {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.rules-overview h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rule-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rule-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rule-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.rule-card h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--white);
+}
+
+.rule-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.rule-card ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.rule-card ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--white);
+}
+
+.rule-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Scoring System Section */
+.scoring-system {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+.scoring-system h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+}
+
+.scoring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.scoring-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.scoring-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scoring-card h3 {
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.scoring-card.cricket h3 {
+    background: var(--primary);
+}
+
+.scoring-card.football h3 {
+    background: var(--secondary);
+}
+
+.scoring-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.scoring-card th, .scoring-card td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light);
+}
+
+.scoring-card th {
+    font-weight: 600;
+    color: var(--dark);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.scoring-card tr:last-child td {
+    border-bottom: none;
+}
+
+.scoring-card td:last-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Contest Rules Section */
+.contest-rules {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.contest-rules h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+}
+
+.rules-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rule-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--light);
+}
+
+.rule-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.rule-item h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.rule-item p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.rule-item ul {
+    list-style: none;
+    background: var(--light);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius);
+}
+
+.rule-item ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.rule-item ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.rule-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Important Notes Section */
+.important-notes {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+.important-notes h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.note-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border-top: 5px solid var(--primary);
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.note-card.warning {
+    border-top-color: #ffc107;
+}
+
+.note-card.danger {
+    border-top-color: #dc3545;
+}
+
+.note-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.note-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Additional Scoring System Section */
+.scoring-system-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.scoring-system-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--gray);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scoring-system-section .scoring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.scoring-system-section .scoring-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.scoring-system-section .scoring-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scoring-system-section .scoring-card h3 {
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.scoring-system-section .scoring-card.basketball h3 {
+    background: #FF6B00;
+}
+
+.scoring-system-section .scoring-card.kabaddi h3 {
+    background: #4CAF50;
+}
+
+.scoring-system-section .scoring-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.scoring-system-section .scoring-card th, 
+.scoring-system-section .scoring-card td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light);
+}
+
+.scoring-system-section .scoring-card th {
+    font-weight: 600;
+    color: var(--dark);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.scoring-system-section .scoring-card.basketball th {
+    background: rgba(255, 107, 0, 0.1);
+}
+
+.scoring-system-section .scoring-card.kabaddi th {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.scoring-system-section .scoring-card tr:last-child td {
+    border-bottom: none;
+}
+
+.scoring-system-section .scoring-card td:last-child {
+    font-weight: 600;
+}
+
+.scoring-system-section .scoring-card.basketball td:last-child {
+    color: #FF6B00;
+}
+
+.scoring-system-section .scoring-card.kabaddi td:last-child {
+    color: #4CAF50;
+}
+
+.scoring-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    color: var(--gray);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .rules-grid, .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .rules-overview h1 {
+        font-size: 2.5rem;
+    }
+    
+    .rules-grid, .scoring-grid, .notes-grid {
+        grid-template-columns: 1fr;
+    }
+    .rule-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .rule-item p {
+        font-size: 1rem;
+    }
+    
+    .scoring-system-section .scoring-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .scoring-system-section h2 {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rules-overview h1 {
+        font-size: 2rem;
+    }
+    
+    .scoring-system h2, .contest-rules h2, .important-notes h2 {
+        font-size: 2rem;
+    }
+    
+    .rule-item ul {
+        padding: 1.25rem 1.5rem;
+    }
+} 
